@@ -2,7 +2,8 @@
 
 ### Financial management of your electricity provider’s various kWh rates. 
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/089c8d62-7b08-40f2-862e-7ce6630dd39e" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/13f8b668-378e-4762-914b-b76dfb3e936e" />
+
 
 This is linked to your inverters, PV panels, and batteries. 
 
