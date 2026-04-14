@@ -2,6 +2,8 @@
 
 ### Financial management of your electricity provider’s various kWh rates.
 
+<img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/compteur.png" width="800"/>
+
 ---
 
 ## ❤️ Support the developer
@@ -11,6 +13,8 @@ If you like this project, you can support development here:
 [![Ko-fi](https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/kofi-button.png)](https://ko-fi.com/tapion69)
 
 ---
+
+# 🇬🇧 ENGLISH VERSION
 
 ## 📊 Overview
 
@@ -25,26 +29,18 @@ Smart Energy Finance is an advanced Home Assistant add-on designed to:
 
 ---
 
-## 🔌 Compatibility
+## ⚠️ Important recommendation
 
-This module is compatible with:
+👉 It is **strongly recommended** to use:
 
-* Inverters
-* Solar panels
-* Battery systems
-* Any Home Assistant energy sensors
+* ✅ Energy sensors (kWh, daily counters)
+* ❌ NOT power sensors (W)
 
----
+Why:
 
-## ⚙️ What it does
-
-The system automatically creates Home Assistant entities to track:
-
-* Daily savings
-* Monthly savings
-* Yearly savings
-* Real cost with and without solar
-* Battery value contribution
+* More accurate calculations
+* No drift over time
+* Reliable daily / monthly / yearly stats
 
 ---
 
@@ -52,21 +48,11 @@ The system automatically creates Home Assistant entities to track:
 
 <img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/energie.png" width="800"/>
 
-* Solar / Battery / Grid distribution
-* Real-time energy mix
-* Self-sufficiency tracking
-* Grid dependency analysis
-
 ---
 
 ## 🔋 Battery Analytics
 
 <img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/batterie.png" width="800"/>
-
-* Charge / discharge tracking
-* Battery energy usage
-* Financial value of battery usage
-* Monthly and yearly breakdown
 
 ---
 
@@ -74,17 +60,11 @@ The system automatically creates Home Assistant entities to track:
 
 <img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/economie.png" width="800"/>
 
-* Daily financial distribution
-* Monthly overview
-* Yearly analysis
-* Subscription cost impact
-* Solar profitability
-
 ---
 
 ## 📈 Premium Features
 
-Smart Energy Finance includes a **Premium mode** that unlocks advanced features:
+Smart Energy Finance includes a **Premium mode** that unlocks advanced features.
 
 ### 🔓 Premium unlocks:
 
@@ -96,33 +76,19 @@ Smart Energy Finance includes a **Premium mode** that unlocks advanced features:
 
 ---
 
-## 🧠 Key Concepts
+## 💳 Premium activation
 
-### 💰 Savings vs No Solar
+👉 Premium access is available via Ko-fi:
 
-The system calculates how much you saved compared to a full grid usage scenario.
+[https://ko-fi.com/tapion69](https://ko-fi.com/tapion69)
 
----
-
-### 🔋 Battery Value
-
-Battery discharge is converted into real financial savings based on current electricity price.
-
----
-
-### ⚡ Dynamic Pricing Support
-
-Supports:
-
-* Fixed tariffs
-* Time-based pricing
-* Tempo (EDF France)
+After purchase, you will receive your **premium key**.
 
 ---
 
 ## ⚙️ Configuration
 
-Example configuration:
+Example:
 
 mqtt_host: core-mosquitto
 mqtt_port: 1883
@@ -130,87 +96,111 @@ mqtt_user: user
 mqtt_password: password
 
 currency: EUR
+contract_type: tempo
 
+monthly_subscription_price: 12.5
+
+dashboard_language: en
+
+---
+
+# 🇫🇷 VERSION FRANÇAISE
+
+## 📊 Présentation
+
+<img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/economie.png" width="800"/>
+
+Smart Energy Finance est un add-on Home Assistant avancé permettant de :
+
+* 💰 Calculer le coût réel de l’énergie
+* ⚡ Valoriser la production solaire
+* 🔋 Évaluer la rentabilité batterie
+* 📈 Suivre les économies dans le temps
+
+---
+
+## ⚠️ Recommandation importante
+
+👉 Il est fortement recommandé d’utiliser :
+
+* ✅ Des compteurs d’énergie (kWh journaliers)
+* ❌ Pas des capteurs de puissance (W)
+
+Pourquoi :
+
+* Calculs plus précis
+* Pas de dérive dans le temps
+* Statistiques fiables
+
+---
+
+## ⚡ Dashboard Énergie
+
+<img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/energie.png" width="800"/>
+
+---
+
+## 🔋 Analyse Batterie
+
+<img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/batterie.png" width="800"/>
+
+---
+
+## 💰 Dashboard Économie
+
+<img src="https://raw.githubusercontent.com/jean-luc1203/smart-energy-finance/main/smart-energy-finance/docs/images/economie.png" width="800"/>
+
+---
+
+## 📈 Fonctionnalités Premium
+
+Le module inclut un mode **Premium** débloquant :
+
+* 📊 Dashboards avancés
+* 📈 Historique complet (jour / mois / année)
+* 🔋 Analyse financière batterie
+* 💡 Insights énergétiques
+* 📉 Analyse détaillée des coûts
+
+---
+
+## 💳 Activation Premium
+
+👉 Le Premium est disponible via Ko-fi :
+
+[https://ko-fi.com/tapion69](https://ko-fi.com/tapion69)
+
+Après achat, vous recevez une **clé premium**.
+
+---
+
+## ⚙️ Configuration
+
+Exemple :
+
+mqtt_host: core-mosquitto
+mqtt_port: 1883
+mqtt_user: user
+mqtt_password: password
+
+currency: EUR
 contract_type: tempo
 
 monthly_subscription_price: 12.5
 
 dashboard_language: fr
-dashboard_custom_cards_installed: true
 
 ---
 
-## 📊 Generated Sensors
-
-### 💰 Financial
-
-* sensor.smart_energy_finance_day_savings_vs_no_solar
-* sensor.smart_energy_finance_month_savings_vs_no_solar
-* sensor.smart_energy_finance_year_savings_vs_no_solar
-
----
-
-### ⚡ Energy
-
-* sensor.smart_energy_finance_day_solar_kwh
-* sensor.smart_energy_finance_day_grid_import_kwh
-
----
-
-### 🔋 Battery
-
-* sensor.smart_energy_finance_battery_day_savings
-* sensor.smart_energy_finance_battery_month_savings
-
----
-
-### 📈 History
-
-* sensor.smart_energy_finance_history_archive
-
-  * daily
-  * monthly
-  * yearly
-
----
-
-## 🚀 Automatic Dashboard
-
-The add-on automatically creates a full premium dashboard inside Home Assistant:
-
-* No manual configuration needed
-* Works with or without custom cards
-* Fully translated (FR / EN)
-
----
-
-## 🛠️ Technology
-
-* Node-RED
-* MQTT Discovery
-* ApexCharts
-* Home Assistant Supervisor API
-
----
-
-## 📌 Roadmap
-
-* CSV export
-* Advanced analytics
-* Energy score
-* Forecast system
-
----
-
-## 🧑‍💻 Author
+# 🧑‍💻 Author
 
 Developed by Tapion69
 
 ---
 
-## ❤️ Support
+# ❤️ Support
 
-If you enjoy this project, consider supporting development:
+If you enjoy this project:
 
 👉 [https://ko-fi.com/tapion69](https://ko-fi.com/tapion69)
 
